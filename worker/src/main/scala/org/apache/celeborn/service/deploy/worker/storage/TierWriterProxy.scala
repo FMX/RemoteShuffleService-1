@@ -25,11 +25,10 @@ import io.netty.buffer.ByteBuf
 
 import org.apache.celeborn.common.CelebornConf
 import org.apache.celeborn.common.meta.{DiskFileInfo, FileInfo, MemoryFileInfo}
-import org.apache.celeborn.common.metrics.source.AbstractSource
 import org.apache.celeborn.common.protocol.{PartitionType, StorageInfo}
 import org.apache.celeborn.service.deploy.worker.memory.MemoryManager
 
-class CelebornFileProxy(
+class TierWriterProxy(
     partitionDataWriterContext: PartitionDataWriterContext,
     storageManager: StorageManager,
     conf: CelebornConf,
